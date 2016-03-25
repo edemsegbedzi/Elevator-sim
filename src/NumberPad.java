@@ -32,7 +32,7 @@ public class NumberPad  extends JFrame {
 	Container container;
 	
 	JPanel topPanel ,buttonPanel ;
-	JButton[] floors =new JButton[6];
+	JButton[] floors =new JButton[8];
 	JTextField screen ;
 	
 	public NumberPad() {
@@ -60,15 +60,17 @@ public class NumberPad  extends JFrame {
 				 
 		 
 		 
-		 int i=0;
-		 for (JButton jButton : floors) {
-			 jButton = new JButton(" "+(i+1));
-		     buttonPanel.add(jButton);
-			
+		 
+		 for (int i=0;i<8;i++) {
+			 floors[i] = new JButton(" "+(i+1));
+		     buttonPanel.add(floors[i]);
+		     
 		}
-	
-	
-	
+		 
+		 floors[5].setText("G");
+		 floors[6].setText("<< >>");
+		 floors[7].setText("ALARM");
+		 
 		 
 	
 
